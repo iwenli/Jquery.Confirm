@@ -1,0 +1,122 @@
+.dialog-mask-div {
+	top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+	display: block;
+    position: fixed;
+    z-index: 999999998;
+    background-color: #000000;
+}
+
+.dialog-main-div {
+    top: 50%;
+    width: 70%;
+    left: 50%;
+    opacity: 1;
+    position: fixed;
+    margin-left: -35%;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    background: #FFFFFF;
+    border-radius: 0.35rem;
+    z-index: 999999999;
+    box-sizing: content-box;  
+	opacity: 1;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transform: translate3d(0,0,0) scale(1);
+    transform: translate3d(0,0,0) scale(1);
+}
+.modal-inner {
+    padding: .75rem;
+    border-radius: .35rem .35rem 0 0;
+    position: relative;
+}
+.modal-inner:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1.1px;
+    width: 100%;
+    background-color: #e0dcdc;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.modal-buttons {
+    height: 2.8rem;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.dialog-button {
+	width: 100%;
+    padding: 0 .25rem;
+    height: 2.8rem;
+    font-size: 1rem;
+    line-height: 2.8rem;
+    text-align: center;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: pointer;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+}
+.dialog-button:first-child {
+    border-radius: 0 0 0 .35rem;
+}
+.dialog-button:last-child {
+    border-radius: 0 0 .35rem 0;
+}
+.dialog-button-normal {
+	float: left;
+	background: #ff8201;
+    color: #fff;
+}
+
+
+.dialog-title {
+	font-weight: 500;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.dialog-content {
+	margin-top: .25rem;
+	font-size: 1rem;
+    line-height: 1.5;
+}
+
+/*自适应 */
+/*5.5*/
+@media(max-width:414px){
+	.dialog-main-div {width: 60%;margin-left: -30%; top: 35%;} 
+	
+}
+
+@media(max-width:388px){
+	.dialog-main-div {width: 70%;margin-left: -35%;}
+}
+
+@media(max-width:380px){
+	.dialog-main-div {width: 70%; margin-left: -35%;}
+}
+
+/*4.7*/
+@media(max-width:375px){
+	.dialog-main-div {width: 70%; margin-left: -35%;}
+}
